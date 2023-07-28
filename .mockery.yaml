@@ -1,0 +1,6 @@
+inpackage: False 
+with-expecter: True 
+testonly: False
+keeptree: False
+all: True
+output: ./mocks

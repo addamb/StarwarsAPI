@@ -1,5 +1,9 @@
 package models
 
+type JsonResponse struct {
+	Message string `json:"message"`
+}
+
 type CharacterInput struct {
 	Name string `json:"name"`
 }
@@ -44,56 +48,25 @@ type SwapiHuman struct {
 }
 
 type SwapiStarship struct {
-	Name                 string `json:"name"`
-	Model                string `json:"model"`
-	Manufacturer         string `json:"manufacturer"`
-	CostInCredits        string `json:"cost_in_credits"`
-	Length               string `json:"length"`
-	MaxAtmospheringSpeed string `json:"max_atmosphering_speed"`
-	Crew                 string `json:"crew"`
-	Passengers           string `json:"passengers"`
-	CargoCapacity        string `json:"cargo_capacity"`
-	Consumables          string `json:"consumables"`
-	HyperdriveRating     string `json:"hyperdrive_rating"`
-	Mglt                 string `json:"MGLT"`
-	StarshipClass        string `json:"starship_class"`
+	Name          string `json:"name"`
+	CargoCapacity string `json:"cargo_capacity"`
+	StarshipClass string `json:"starship_class"`
 }
 
 type SwapiSpecies struct {
 	Name            string `json:"name"`
-	Classification  string `json:"classification"`
-	Designation     string `json:"designation"`
-	AverageHeight   string `json:"average_height"`
-	SkinColors      string `json:"skin_colors"`
-	HairColors      string `json:"hair_colors"`
-	EyeColors       string `json:"eye_colors"`
 	AverageLifespan string `json:"average_lifespan"`
-	Homeworld       any    `json:"homeworld"`
 	Language        string `json:"language"`
 }
 
 type SwapiPlanet struct {
-	Name           string `json:"name"`
-	RotationPeriod string `json:"rotation_period"`
-	OrbitalPeriod  string `json:"orbital_period"`
-	Diameter       string `json:"diameter"`
-	Climate        string `json:"climate"`
-	Gravity        string `json:"gravity"`
-	Terrain        string `json:"terrain"`
-	SurfaceWater   string `json:"surface_water"`
-	Population     string `json:"population"`
+	Name       string `json:"name"`
+	Climate    string `json:"climate"`
+	Population string `json:"population"`
 }
 
 type SwapiVehicles struct {
-	Name                 string `json:"name"`
-	Model                string `json:"model"`
-	Manufacturer         string `json:"manufacturer"`
-	CostInCredits        string `json:"cost_in_credits"`
-	Length               string `json:"length"`
-	MaxAtmospheringSpeed string `json:"max_atmosphering_speed"`
-	Crew                 string `json:"crew"`
-	Passengers           string `json:"passengers"`
-	CargoCapacity        string `json:"cargo_capacity"`
-	Consumables          string `json:"consumables"`
-	VehicleClass         string `json:"vehicle_class"`
+	Name          string `json:"name"`
+	CargoCapacity string `json:"cargo_capacity"`
+	VehicleClass  string `json:"vehicle_class"`
 }

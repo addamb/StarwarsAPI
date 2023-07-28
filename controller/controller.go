@@ -75,6 +75,14 @@ func (c *Controller) GetCharacterByNameHandler(e echo.Context) (err error) {
 		characters = append(characters, character)
 	}
 
+	if len(characters) == 0 {
+		message := models.JsonResponse{
+			Message: "Character not found",
+		}
+
+		return e.JSON(http.StatusAccepted, message)
+	}
+
 	if len(characters) > 1 {
 		sort.SliceStable(characters, func(i, j int) bool {
 			return characters[i].Name < characters[j].Name

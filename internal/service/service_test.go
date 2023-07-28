@@ -95,15 +95,9 @@ func Test_GetPlanet(t *testing.T) {
 	assert := assert.New(t)
 
 	swapiResponse := models.SwapiPlanet{
-		Name:           "Tatooine",
-		RotationPeriod: "23",
-		OrbitalPeriod:  "304",
-		Diameter:       "10465",
-		Climate:        "arid",
-		Gravity:        "1 standard",
-		Terrain:        "desert",
-		SurfaceWater:   "1",
-		Population:     "200000",
+		Name:       "Tatooine",
+		Climate:    "arid",
+		Population: "200000",
 	}
 
 	tests := map[string]struct {
@@ -177,19 +171,9 @@ func Test_GetStarships(t *testing.T) {
 	assert := assert.New(t)
 
 	swapiStarship := models.SwapiStarship{
-		Name:                 "X-wing",
-		Model:                "T-65 X-wing",
-		Manufacturer:         "Incom Corporation",
-		CostInCredits:        "149999",
-		Length:               "12.5",
-		MaxAtmospheringSpeed: "1050",
-		Crew:                 "1",
-		Passengers:           "0",
-		CargoCapacity:        "110",
-		Consumables:          "1 week",
-		HyperdriveRating:     "1.0",
-		Mglt:                 "100",
-		StarshipClass:        "Starfighter",
+		Name:          "X-wing",
+		CargoCapacity: "110",
+		StarshipClass: "Starfighter",
 	}
 
 	swapiResponse := []models.SwapiStarship{
@@ -268,14 +252,7 @@ func Test_GetSpecies(t *testing.T) {
 
 	swapiSpecies := models.SwapiSpecies{
 		Name:            "Droid",
-		Classification:  "artificial",
-		Designation:     "sentient",
-		AverageHeight:   "n/a",
-		SkinColors:      "n/a",
-		HairColors:      "n/a",
-		EyeColors:       "n/a",
 		AverageLifespan: "indefinite",
-		Homeworld:       nil,
 		Language:        "n/a",
 	}
 
@@ -354,17 +331,9 @@ func Test_GetVehicles(t *testing.T) {
 	assert := assert.New(t)
 
 	swapiSpecies := models.SwapiVehicles{
-		Name:                 "Snowspeeder",
-		Model:                "t-47 airspeeder",
-		Manufacturer:         "Incom corporation",
-		CostInCredits:        "unknown",
-		Length:               "4.5",
-		MaxAtmospheringSpeed: "650",
-		Crew:                 "2",
-		Passengers:           "0",
-		CargoCapacity:        "10",
-		Consumables:          "none",
-		VehicleClass:         "airspeeder",
+		Name:          "Snowspeeder",
+		CargoCapacity: "10",
+		VehicleClass:  "airspeeder",
 	}
 
 	swapiResponse := []models.SwapiVehicles{
